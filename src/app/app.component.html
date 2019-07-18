@@ -1,0 +1,153 @@
+<div class="screens">
+  <div class="personalDetailsScreen">
+    <div class="headerContainer">
+      <div class="header">
+        <div class="favourites">
+          <i class="fa fa-heart"></i>
+        </div>
+        <div class="walletCredits">
+            <i class="fa fa-credit-card"></i>
+            50 Credits remaining
+        </div>
+        <div class="accountDetails">
+          Jhon doe
+          <i class="fa fa-caret-down"></i>
+        </div>
+      </div>
+
+      <div class="personalSettingsContainer" *ngIf="!settingsPageShown">
+        <div class="editSettingsContainer">
+          <div class="editSettings">
+            Personal
+            <a class="fa fa-pencil" (click)="toggleSettingsPage()"></a>
+          </div>
+
+          <div class="addSettings">
+            <a class="fa fa-plus"></a>
+          </div>
+
+        </div>
+        <div class="viewSettingsContainer">
+          <div class="viewSettings">
+            <div class="settingsList">
+              <ul>
+                <li>
+                  <input class="settings" name="revenue" [(ngModel)]="revenue" id="revenue" type="checkbox">
+                  <label for="revenue">
+                    Revenue
+                  </label>
+                  <div class="inputValues" *ngIf="revenue && currentTurnOver">
+                    <em>{{currentTurnOver}}</em>
+                  </div>
+                  <div class="inputValues" *ngIf="revenue && !currentTurnOver">
+                    <em>No settings found</em>
+                  </div>
+
+                </li>
+                <li>
+                  <input class="settings" name="employee-size" [(ngModel)]="employeeSize" id="employee-size" type="checkbox">
+                  <label for="employee-size">
+                    Employee Size
+                  </label>
+                  <div class="inputValues" *ngIf="employeeSize && currentEmployeeSize">
+                    <em>{{currentEmployeeSize}}</em>
+                  </div>
+
+                  <div class="inputValues" *ngIf="employeeSize && !currentEmployeeSize">
+                    <em>No settings found</em>
+                  </div>
+                </li>
+                <li>
+                  <input class="settings" name="industry" [(ngModel)]="industry" id="industry" type="checkbox">
+                  <label for="industry">
+                    Industry
+                  </label>
+                  <div class="inputValues" *ngIf="industry && selectedIndustry && selectedIndustry.length > 0">
+                    <em *ngFor="let val of selectedIndustry">{{val.name}}</em>
+                  </div>
+                  <div class="inputValues" *ngIf="industry && !selectedIndustry">
+                    <em>No settings found</em>
+                  </div>
+
+                </li>
+                <li>
+                  <input class="settings" name="location" [(ngModel)]="location" id="location" type="checkbox">
+                  <label for="location">
+                    Location
+                  </label>
+                  <div class="inputValues" *ngIf="location && selectedLocation && selectedLocation.length > 0">
+                    <em *ngFor="let val of selectedLocation">{{val.name}}</em>
+                  </div>
+                  <div class="inputValues" *ngIf="location && !selectedLocation">
+                    <em>No settings found</em>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="metricsContainer">
+              <p> MetricFox </p>
+              <div class="metricsGraph">
+                <em class="metricsGraphOuter">
+                  <em class="metricsGraphInner">
+                    <span>80%</span>
+                    Matching
+                  </em>
+                </em>
+              </div>
+              <button class="similarCompanies" value="similarCompanies">Show Similar Companies</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="personalSettingsContainer" *ngIf="settingsPageShown">
+        <div class="saveSettingsContainer">
+          <p class="settingsType">
+            Personal
+          </p>
+          <button class="save" value="save" (click)="toggleSettingsPage()">Save</button>
+        </div>
+        <div class="editSettingsContainer">
+          <div class="changeSettings">
+            <p>Industry</p>
+
+            <ngx-select-dropdown (change)="selectionChanged($event, 'industry')" [multiple]="true" [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+
+            <ul class="settingsList">
+              <li class="settingOption">
+                <p>Revenue</p>
+
+                <div class="rangeSliderOuter">
+                  <nouislider class="rangeSlider" [config]="turnOverConfig" [(ngModel)]="turnOverRange" (change)="monitorTurnOver($event)"></nouislider>
+                </div>
+              </li>
+
+              <li class="settingOption">
+                <p>Employee size</p>
+
+                <div class="rangeSliderOuter">
+                  <nouislider class="rangeSlider" [config]="employeeSizeConfig" [(ngModel)]="employeeSizeRange" (change)="monitorEmployeeSize($event)"></nouislider>
+                </div>
+              </li>
+
+              <li class="settingOption">
+                <p>Location</p>
+
+                <ngx-select-dropdown (change)="selectionChanged($event, 'location')" [multiple]="true" [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+              </li>
+
+              <li class="settingOption">
+                <p>Department</p>
+
+                <ngx-select-dropdown (change)="selectionChanged($event, 'department')" [multiple]="true" [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~nouislider/distribute/nouislider.min.css";
+
+
+
+.rangeSliderOuter .rangeSlider {
+  border: none;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-horizontal .noUi-origin {
+  font-size: 11px;
+  color: #6c6e71;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-horizontal {
+  height: 6px;
+  border-radius: 0;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-horizontal .noUi-marker-horizontal.noUi-marker-large {
+  height: 4px;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-horizontal .noUi-pips-horizontal {
+  font-size: 14px;
+  color: #9b9b9c;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-horizontal .noUi-connects {
+  background: #d7d7d7;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-horizontal .noUi-connects .noUi-connect {
+  background: #2075b4;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-handle {
+  height: 1em !important;
+  width: 1em !important;
+  top: -0.4em !important;
+  right: -0.5em !important;
+  border-radius: 100%;
+  background: #2075b4;
+  box-shadow: none;
+  border: 1px solid #2075b4;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-handle:before, .rangeSliderOuter .rangeSlider .noUi-handle:after {
+  display: none;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-handle .noUi-tooltip {
+  background-color: #ebf5ff;
+  border: none;
+  transform: translate(-50%, 0);
+  left: 50%;
+  bottom: 200%;
+  color: #6c6e71;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-handle .noUi-tooltip:after {
+  content: '';
+  position: absolute;
+  border: 5px solid transparent;
+  border-top: 5px solid #ebf5ff;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+}
+
+.rangeSliderOuter .rangeSlider .noUi-handle.noUi-handle-upper:focus, .rangeSliderOuter .rangeSlider .noUi-handle.noUi-handle-lower:focus {
+  outline: none;
+}
+
+

@@ -1,0 +1,266 @@
+body {
+  font-family: Arial, Helvetica, sans-serif !important;
+  overflow: scroll;
+}
+
+.screens {
+  width: 500px;
+  position: absolute;
+  margin: 70px auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-family: sans-serif;
+  box-shadow: 3px 2px 5px 1px rgba(51, 51, 51, 0.5);
+  overflow: scroll;
+  height: min-content;
+}
+
+.personalDetailsScreen {
+ padding: 20px;
+ box-shadow: 3px 2px 5px 1px rgba(51, 51, 51, 0.5);
+}
+
+.header {
+    padding: 2px 10px 0;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #2075b4;
+}
+.favourites {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 3px 2px 5px 1px rgba(51, 51, 51, 0.5);
+}
+.fa-heart {
+  color: red;
+  margin: auto;
+}
+.walletCredits {
+  display: inline-block;
+  color: #2075b4;
+  line-height: 2;
+}
+.fa-credit-card {
+  font-size: 28px;
+  vertical-align: sub;
+  color: #757677;
+}
+.accountDetails {
+  display: inline-block;
+  color: #757677;
+  line-height: 2;
+}
+.fa-caret-down {
+  color: #000;
+  font-size: 16px;
+}
+.personalSettingsContainer {
+  margin: 7px 4px;
+  box-shadow: 0px 0px 3px 2px #e1e1e1;
+  padding: 14px 20px;
+  letter-spacing: 1.1px;
+}
+
+.editSettingsContainer .changeSettings p {
+  color: #838484;
+  margin: 0;
+  font-size: 14px;
+}
+
+.editSettings {
+  display: inline-block;
+  color: #2075b4;
+}
+.fa-pencil {
+  font-size: 14px;
+  cursor: pointer;
+}
+.addSettings {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #2075b4;
+  text-align: center;
+  line-height: 36px;
+  margin: 0 10px;
+}
+.fa-plus {
+  color: #2075b4;
+  font-size: 16px;
+}
+.viewSettings label {
+  color: #4a4b4c;
+}
+.settings {
+  display: none;
+}
+.settings + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.settings + label:before {
+  content: "";
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: #757670;
+  border-radius: 50%;
+}
+.settings:checked + label:before {
+  background: #2075b4;
+}
+.settings + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: white;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: inline-block;
+}
+
+.viewSettings li {
+  margin: 20px 0;
+}
+
+.metricsContainer {
+  display: inline-block;
+  text-align: center;
+}
+
+.metricsContainer p {
+  color: #747171;
+  font-size: 24px;
+}
+
+.metricsGraph {
+  display: flex;
+  justify-content: center;
+}
+
+.metricsGraph .metricsGraphInner span {
+  color: #2075b4;
+}
+
+.metricsGraph .metricsGraphInner {
+  width: 110px;
+  height: 60px;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  border-bottom: 0;
+  background: #fff;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.metricsGraph .metricsGraphOuter {
+  width: 200px;
+  height: 100px;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 0;
+  background: linear-gradient(to right, #67b8f2, #2075b4 70%, #e0e0e0 75%);
+  box-shadow: 1px 0px 4px 3px rgba(51, 51, 51, 0.3);
+}
+
+.viewSettings {
+  display: flex;
+  justify-content: space-between;
+}
+
+.similarCompanies {
+  margin: 15px 0;
+  width: 240px;
+  height: 50px;
+  border: none;
+  background: #edf5fe;
+  box-shadow: 2px 2px 4px 0px rgba(51, 51, 51, 0.3);
+  color: #2075b4;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.settingsList {
+  display: inline-block;
+}
+
+.personalSettingsContainer {
+  margin: 7px 4px;
+  box-shadow: 0px 0px 3px 2px #e1e1e1;
+  padding: 14px 20px;
+  letter-spacing: 1.1px;
+}
+
+.settingsType {
+  display: inline-block;
+}
+
+.save {
+  width: 90px;
+  height: 35px;
+  border: none;
+  background: #edf5fe;
+  box-shadow: 2px 2px 4px 1px rgba(51, 51, 51, 0.3);
+  color: #2075b4;
+  font-size: 14px;
+  letter-spacing: 1px;
+  float: right;
+  margin: 8px 0;
+  cursor: pointer;
+}
+
+.settingsList {
+  display: block;
+}
+
+.settingOption {
+  margin: 10px;
+  display: inline-block;
+  width: 45%;
+  margin-bottom: 24px;
+}
+
+.nsdicon-angle-down:before {
+  content: "\f0d7";
+}
+
+.inputValues em {
+  font-size: 10px;
+  border: 1px solid #ccc;
+  padding: 3px;
+  background: #edf5fe;
+  color: #757677;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.inputValues {
+  margin: 6px 35px;
+}
+
