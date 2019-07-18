@@ -70,38 +70,76 @@ export class AppComponent implements OnInit {
   config = {
     displayKey: "name",
     search: true,
-    limitTo: 3
+    limitTo: 5
   };
 
 
-  dropdownOptions = [
+  industryOptions = [
     {
       "index": 0,
-      "name": "Burns Dalton"
+      "name": "Sales"
     },
     {
       "index": 1,
-      "name": "Mcintyre Lawson"
+      "name": "Marketing"
     },
     {
       "index": 2,
-      "name": "Amie Franklin"
+      "name": "Advertising"
     },
     {
       "index": 3,
-      "name": "Jocelyn Horton"
+      "name": "Entertainment"
     },
     {
       "index": 4,
-      "name": "Fischer Erickson"
+      "name": "Animation"
+    }
+  ];
+
+  departmentOptions = [
+    {
+      "index": 0,
+      "name": "Sales"
     },
     {
-      "index": 5,
-      "name": "Medina Underwood"
+      "index": 1,
+      "name": "Marketing"
     },
     {
-      "index": 6,
-      "name": "Goldie Barber"
+      "index": 2,
+      "name": "Advertising"
+    },
+    {
+      "index": 3,
+      "name": "Entertainment"
+    },
+    {
+      "index": 4,
+      "name": "Animation"
+    }
+  ];
+
+  locationOptions = [
+    {
+      "index": 0,
+      "name": "India"
+    },
+    {
+      "index": 1,
+      "name": "Singapore"
+    },
+    {
+      "index": 2,
+      "name": "USA"
+    },
+    {
+      "index": 3,
+      "name": "China"
+    },
+    {
+      "index": 4,
+      "name": "UK"
     }
   ];
 

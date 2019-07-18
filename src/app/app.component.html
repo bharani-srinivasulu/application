@@ -112,7 +112,7 @@
           <div class="changeSettings">
             <p>Industry</p>
 
-            <ngx-select-dropdown (change)="selectionChanged($event, 'industry')" [multiple]="true" [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+            <ngx-select-dropdown (change)="selectionChanged($event, 'industry')" [multiple]="true" [config]="config" [options]="industryOptions"></ngx-select-dropdown>
 
             <ul class="settingsList">
               <li class="settingOption">
@@ -134,13 +134,13 @@
               <li class="settingOption">
                 <p>Location</p>
 
-                <ngx-select-dropdown (change)="selectionChanged($event, 'location')" [multiple]="true" [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+                <ngx-select-dropdown (change)="selectionChanged($event, 'location')" [multiple]="true" [config]="config" [options]="locationOptions"></ngx-select-dropdown>
               </li>
 
               <li class="settingOption">
                 <p>Department</p>
 
-                <ngx-select-dropdown (change)="selectionChanged($event, 'department')" [multiple]="true" [config]="config" [options]="dropdownOptions"></ngx-select-dropdown>
+                <ngx-select-dropdown (change)="selectionChanged($event, 'department')" [multiple]="true" [config]="config" [options]="departmentOptions"></ngx-select-dropdown>
               </li>
 
             </ul>
